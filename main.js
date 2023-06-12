@@ -25,7 +25,7 @@ createApp({
             console.log("Dati ricevuti: ", oggetto.data);
             const risposta = oggetto.data;
             this.ArrayStudenti = risposta;
-            console.log("array è", this.ArrayStudenti)
+            console.log("array è", this.ArrayStudenti[0].name)
         });
         
     }

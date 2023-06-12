@@ -16,9 +16,9 @@
 </head>
 <body>
     
-    <div id="app" class="text-center">
+    <div id="app" >
 
-        <header>
+        <header class="text-center">
             <section class="container">
                 <div class="row">
                     <div class="col-12">
@@ -28,7 +28,7 @@
 
             </section>
         </header>
-        <main>
+        <main class="text-center">
             <section class="container">
                 <div class="row">
                     <div class="col-12">
@@ -46,7 +46,9 @@
                 <div class="row">
                     <div class="col-4">
                         <p>
-                            {{ ArrayStudenti[0].name }}
+                            <!--
+                            {{ this.ArrayStudenti[0].name }}
+-->
                         </p>
                     </div>
                 
