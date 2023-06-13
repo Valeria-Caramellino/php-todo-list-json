@@ -6,10 +6,7 @@ createApp({
             riprendoClasse:"",
             api:"api.php",
             listaToDo:[],
-            newData :{
-                "text":"",
-                "done" : false
-            },
+            newData :"",
             
         }
     },
@@ -34,7 +31,7 @@ createApp({
            
             const dato = {deleteTask: indice};
            
-
+            console.log(dato);
             this.PrendiData(dato);
            
         },
@@ -46,7 +43,7 @@ createApp({
             }).then((oggetto) => {
                 console.log("Dati ricevuti: ", oggetto.data);
                 this.listaToDo = oggetto.data;
-                this.newData.text = "";
+               
             });
         },
         changeDone(indice){

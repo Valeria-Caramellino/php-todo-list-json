@@ -12,16 +12,19 @@ $ToDoListDati= json_decode($ToDoList , true);
 
 if( isset($_POST['newData']) ) {
 
-    $ToDoListDati[] = $_POST['newData'];
+    $ToDoListDati[] = [
+        'text' => $_POST['newData'],
+        'done' => false
+    ] ;
     file_put_contents("dati.json", json_encode($ToDoListDati) );
 
 }
-else if (isset($_POST['deleteTask'])){
+elseif (isset($_POST['deleteTask'])){
     
     $index = $_POST['deleteTask'];
    
-    array_splice($todoListDati , $index, 1);
-    file_put_contents("dati.json", json_encode($todoListDati) );
+    array_splice($ToDoListDati , $index, 1);
+    file_put_contents("dati.json", json_encode($ToDoListDati) );
 }
 
 //ristampo il dato riconvertendolo

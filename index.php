@@ -49,7 +49,7 @@
                 <div class="row my-4">
                     <div class="col-5 mx-auto">
                     <div class="input-group">
-                        <input v-model="newData.text" @keyUp.enter="addNewData" type="text" class="form-control" placeholder="Inserisci la nuova attività">
+                        <input v-model="newData" @keyUp.enter="addNewData" type="text" class="form-control" placeholder="Inserisci la nuova attività">
                         <button @click="addNewData" class="btn btn-primary">Aggiungi</button>
                     </div>
 
