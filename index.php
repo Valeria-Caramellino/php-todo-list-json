@@ -48,14 +48,12 @@
                 </div>
                 <div class="row my-4">
                     <div class="col-5 mx-auto">
-                    <div class="input-group">
-                        <input v-model="newData" @keyUp.enter="addNewData" type="text" class="form-control" placeholder="Inserisci la nuova attività">
-                        <button @click="addNewData" class="btn btn-primary">Aggiungi</button>
-                    </div>
+                        <div class="input-group">
+                            <input v-model="newData" @keyUp.enter="addNewData" type="text" class="form-control" placeholder="Inserisci la nuova attività">
+                            <button @click="addNewData" class="btn btn-primary">Aggiungi</button>
+                        </div>
 
-                    <div class="input-group mt-4">
-                        <button  class="btn btn-secondary">Elimina tutti</button>
-                    </div>
+                    
                     </div>
 
                 </div>
