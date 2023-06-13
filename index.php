@@ -22,7 +22,8 @@
             <section class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 :class="riprendoClasse"> {{ titolo }} </h1>
+                        
+                        <h1> {{ titolo }} </h1>
                     </div>
                 </div>
 
@@ -30,36 +31,41 @@
         </header>
         <main class="text-center">
             <section class="container">
+<!-- -->                
                 <div class="row">
-                    <div class="col-12">
-                        <img class="rounded-circle" :src="img" alt="mare">
+                    <div class="col-4 my-4 mx-auto">
+                    <ul>
+                        <template v-for="(oggetto , indice) in this.listaToDo ">
+                            <li  :class="addClass(oggetto)">
+                                <span @click="changeDone(indice)">{{ oggetto.text }}</span>
+                                 <button class="my-2 mx-2 btn btn-primary" @click ="changeDone(indice)"> fatto </button>
+                                 <button class="my-2 mx-2 btn btn-primary" @click ="remuve(indice)"> elimina </button>
+                            </li>
+                            <hr>
+                        </template>
+                    </ul>
                     </div>
-<!--
-                    <div class="col-12">
-                        <button @click="chiamata" class="btn btn-success my-3">
-                            click
-                        </button>
--->
+                </div>
+                <div class="row my-4">
+                    <div class="col-5 mx-auto">
+                    <div class="input-group">
+                        <input v-model="newData.text" @keyUp.enter="addNewData" type="text" class="form-control" placeholder="Inserisci la nuova attività">
+                        <button @click="addNewData" class="btn btn-primary">Aggiungi</button>
+                    </div>
+
+                    <div class="input-group mt-4">
+                        <button  class="btn btn-secondary">Elimina tutti</button>
+                    </div>
                     </div>
 
                 </div>
-                <div class="row">
-                    <div class="col-4">
-                        <p>
-                            <!--
-                            {{ this.ArrayStudenti[0].name }}
--->
-                        </p>
-                    </div>
                 
-                </div>
-
             </section>
             
         </main>
-    
+     
     </div>
-    <script src="./main.js"></script>
-
+  
+ <script src="./main.js"></script>
 </body>
 </html>

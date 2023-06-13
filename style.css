@@ -15,3 +15,6 @@ img{
 .green{
     color: green;
 }
+.linea{
+    text-decoration: line-through black;
+}
